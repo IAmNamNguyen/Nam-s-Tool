@@ -20,8 +20,10 @@ if check == "yes":
             notenum = int(input("Ghi tên note: "))
             notetext = str(input("Nội dung note: "))
             html = f'<p id="{t}">{paras[t]}<span id="anchor-note{notenum}" class="tooltip note1"><img src="https://filedn.com/l6Yawa51iDjJ68pgrC3ymCB/WebData/Images/item.png" title="note1"><a href="#note1" title="Xuống dưới">.</a><span class="toolttext">{notetext}</span></span></p>\n'
+            out(html)
         else:
             html = f'<p id="{t}">{paras[t]}</p>\n'
+            out(html)
         
 
     
