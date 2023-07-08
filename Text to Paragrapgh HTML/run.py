@@ -13,9 +13,10 @@ checknote = str(input("Có note không? (yes/no): "))
 if checknote == "yes":
     notes = str(input("Liệt kê các dòng cần note (ngăn cách bởi dấu phẩy, viết liền):"))
     listnote = list(map(int, notes.split(",")))
+l = 1
 if check == "yes":
     for t in range(len(paras)):
-        if t in listnote:
+        if l in listnote:
             print(f'Đã đến dòng chứa note (dòng {t}).')
             notenum = int(input("Ghi tên note: "))
             notetext = str(input("Nội dung note: "))
@@ -24,6 +25,6 @@ if check == "yes":
         else:
             html = f'<p id="{t}">{paras[t]}</p>\n'
             out(html)
-        
+        l = l + 1
 
     
