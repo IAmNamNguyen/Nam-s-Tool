@@ -60,6 +60,6 @@ for t in range(len(images)):
         else:
             del html[3]
     
-    merged_html = ' '.join(html) + '\n'
+    merged_html = ''.join(html) + '\n'
     with open(output_file,'a',encoding="utf-8") as o:
         o.write(str(merged_html))
