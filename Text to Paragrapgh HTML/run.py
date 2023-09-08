@@ -19,7 +19,7 @@ for t in range(len(paras)):
         print(f'Đã đến dòng chứa note (dòng {l}).')
         notenum = int(input("Ghi tên note: "))
         notetext = str(input("Nội dung note: "))
-        html = f'<p id="{t}">{paras[t]}<span id="anchor-note{notenum}" class="tooltip note1"><img src="https://filedn.com/l6Yawa51iDjJ68pgrC3ymCB/WebData/Images/item.png" title="note{notenum}"><a href="#note{notenum}" title="Xuống dưới">.</a><span class="toolttext">{notetext}</span></span></p>\n'
+        html = f'<p id="{t}">{paras[t]}<span id="anchor-note{notenum}" class="tooltip note1"><img src="https://lh3.googleusercontent.com/drive-viewer/AITFw-xyuuPf49I2OFom2c6CIbz141FBPVeMYdXXuHBxXSbMG1QimWwH6hRod5vafbrjzRALb8rIhpUrVmEK6j5XbdYhszKLKA=s1600" title="note{notenum}" width="50" height="50"><a href="#note{notenum}" title="Xuống dưới">.</a><span class="toolttext">{notetext}</span></span></p>\n'
         with open(output_file,'a',encoding="utf-8") as o:
             o.write(str(html))
     else:
