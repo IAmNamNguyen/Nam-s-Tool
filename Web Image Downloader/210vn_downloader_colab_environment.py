@@ -6,7 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import os
 import urllib.request
 from urllib.parse import urlparse, urlunparse
-import re
+import time
 
 # Khởi tạo trình duyệt
 options = webdriver.ChromeOptions()
@@ -20,8 +20,18 @@ driver = webdriver.Chrome(service=service,options=options)
 url = input("Nhập URL của trang web: ")
 driver.get(url)
 
+# Cuộn trang từ đầu đến cuối
+lenOfPage = driver.execute_script("window.scrollTo(0, document.body.scrollHeight);var lenOfPage=document.body.scrollHeight;return lenOfPage;")
+match=False
+while(match==False):
+    lastCount = lenOfPage
+    time.sleep(3)
+    lenOfPage = driver.execute_script("window.scrollTo(0, document.body.scrollHeight);var lenOfPage=document.body.scrollHeight;return lenOfPage;")
+    if lastCount==lenOfPage:
+        match=True
+
 # Tìm tất cả thẻ <img> trong thẻ <div id=image>
-images = driver.find_elements_by_xpath('//div[@id="image"]//img')
+images = driver.find_elements_by_tag_name('img')
 
 # Tạo thư mục để lưu hình ảnh nếu nó chưa tồn tại
 if not os.path.exists('images'):
