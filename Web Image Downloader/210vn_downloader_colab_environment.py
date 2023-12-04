@@ -25,7 +25,7 @@ lenOfPage = driver.execute_script("window.scrollTo(0, document.body.scrollHeight
 match=False
 while(match==False):
     lastCount = lenOfPage
-    time.sleep(3)
+    time.sleep(7)
     lenOfPage = driver.execute_script("window.scrollTo(0, document.body.scrollHeight);var lenOfPage=document.body.scrollHeight;return lenOfPage;")
     if lastCount==lenOfPage:
         match=True
@@ -53,7 +53,7 @@ for i, img in enumerate(images, start=1):
     file_name = os.path.join('images', f'{i:04}.jpg')
 
     # Tải hình ảnh về
-    urllib.request.urlretrieve(src, file_name)
+    urllib.request.urlretrieve(new_url, file_name)
 
 # Đóng trình duyệt
 driver.quit()
