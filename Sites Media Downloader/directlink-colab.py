@@ -2,9 +2,9 @@ import sys
 from urllib.parse import urlparse as urlp
 link = sys.argv[1]
 name = sys.argv[2]
-custom_name = sys.agrv[3]
-vi_tri_luu = sys.agrv[4]
-no_check_certificate = sys.agrv[5]
+custom_name = sys.argv[3]
+vi_tri_luu = sys.argv[4]
+no_check_certificate = sys.argv[5]
 
 def directdown(link, name, vi_tri_luu, no_check_certificate):
     if no_check_certificate:
