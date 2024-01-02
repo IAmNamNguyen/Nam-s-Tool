@@ -5,7 +5,9 @@
 - Example: https://drive.google.com/file/d/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/view
 - The "xxxxx" part is the id.
 2. Direct link - Full link
-3. Iwara
+3. Iwara - Only video id:
+- Example: https://www.iwara.tv/video/xxxxxxxxxxxxxxx/title...
+- The "xxxxx" part is the video id.
 
 ## Have to preset name file:
 1. Google Drive
