@@ -3,9 +3,9 @@
 
 import requests, hashlib, os
 import sys
-email = sys.agrv[1]
-password = sys.agrv[2]
-video_id = sys.agrv[3]
+email = sys.argv[1]
+password = sys.argv[2]
+video_id = sys.argv[3]
 
 api_url = 'https://api.iwara.tv'
 file_url = 'https://files.iwara.tv'
