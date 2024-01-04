@@ -6,6 +6,8 @@ import sys
 email = sys.argv[1]
 password = sys.argv[2]
 video_id = sys.argv[3]
+specify_name = sys.argv[4]
+preset_name = sys.argv[5]
 
 api_url = 'https://api.iwara.tv'
 file_url = 'https://files.iwara.tv'
@@ -204,8 +206,10 @@ class ApiClient:
 
                 download_link = "https:" + resource['src']['download']
                 file_type = resource['type'].split('/')[1]
-
-                video_file_name = video_id + '.' + file_type
+                if specify_name:
+                    video_file_name = preset_name + '.' + file_type
+                else:
+                    video_file_name = video_id + '.' + file_type
 
                 if (os.path.exists(video_file_name)):
                     print(f"Video ID {video_id} Already downloaded, skipped downloading. ")
