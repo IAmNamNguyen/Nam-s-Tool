@@ -12,11 +12,7 @@
 ## Have to preset name file:
 1. Google Drive
 
-
-## Preset name file does not support:
-1. Iwara
-
-## Save file location does not support:
+## Save file location does not support (It will always save the file on the Colab Temp Storage):
 1. Iwara
 
 ## Have to enter account credentials:

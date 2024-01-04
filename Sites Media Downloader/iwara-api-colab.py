@@ -2,6 +2,7 @@
 #Edited by @IAmNamNguyen
 
 import requests, hashlib, os
+import json
 import sys
 email = sys.argv[1]
 password = sys.argv[2]
@@ -9,6 +10,11 @@ video_id = sys.argv[3]
 specify_name = sys.argv[4]
 preset_name = sys.argv[5]
 
+if specify_name:
+    if preset_name == "":
+        print("ERROR - You haven't specified file name")
+        sys.exit(0)
+        
 api_url = 'https://api.iwara.tv'
 file_url = 'https://files.iwara.tv'
 
@@ -166,6 +172,9 @@ class ApiClient:
         #Debug
         print(video)
 
+        #Chuyển JSON thành dạng Python đọc được
+        python_readable_json = json.loads(video)
+
         url = video['fileUrl']
         file_id = video['file']['id']
         expires = url.split('/')[4].split('?')[1].split('&')[0].split('=')[1]
@@ -209,7 +218,7 @@ class ApiClient:
                 if specify_name:
                     video_file_name = preset_name + '.' + file_type
                 else:
-                    video_file_name = video_id + '.' + file_type
+                    video_file_name = python_readable_json['title'] + '.' + file_type
 
                 if (os.path.exists(video_file_name)):
                     print(f"Video ID {video_id} Already downloaded, skipped downloading. ")
