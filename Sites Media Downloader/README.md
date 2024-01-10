@@ -11,6 +11,9 @@
 
 ## Have to preset name file:
 1. Google Drive
+2. OneDrive (Sharepoint)
+3. Dropbox
+4. Helurl.com (Only Direct Link)
 
 ## Save file location does not support (It will always save the file on the Colab Temp Storage):
 1. Iwara

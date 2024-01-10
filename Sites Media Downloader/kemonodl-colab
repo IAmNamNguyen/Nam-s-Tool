@@ -1,4 +1,4 @@
-https://github.com/AlphaSlayer1964/kemono-dl/tree/main
+#https://github.com/AlphaSlayer1964/kemono-dl/tree/main
 
 import requests
 from requests.adapters import HTTPAdapter, Retry
