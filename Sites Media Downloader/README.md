@@ -16,7 +16,8 @@
 4. Helurl.com (Only Direct Link)
 
 ## Save file location does not support (It will always save the file on the Colab Temp Storage):
-1. Iwara
+1. Direct Link
+2. Iwara
 
 ## Have to enter account credentials:
 1. Iwara

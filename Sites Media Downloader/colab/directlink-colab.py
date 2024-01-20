@@ -7,10 +7,10 @@ custom_name = sys.argv[3]
 no_check_certificate = sys.argv[4]
 
 def directdown(link, name, no_check_certificate):
-    if no_check_certificate:
-      !wget -O "$name" "$link" --no-check-certificate
-    else:
+    if no_check_certificate == False:
       !wget -O "$name" "$link"
+    elif no_check_certificate:
+      !wget -O "$name" "$link" --no-check-certificate
 
 if custom_name:
     directdown(link, name, no_check_certificate)
