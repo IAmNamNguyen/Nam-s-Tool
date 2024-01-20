@@ -1,4 +1,5 @@
 import sys
+from os import system as system
 from urllib.parse import urlparse as urlp
 
 link = sys.argv[1]
@@ -7,10 +8,10 @@ custom_name = sys.argv[3]
 no_check_certificate = sys.argv[4]
 
 def directdown(link, name, no_check_certificate):
-    if no_check_certificate == False:
-      !wget -O "$name" "$link"
-    elif no_check_certificate:
-      !wget -O "$name" "$link" --no-check-certificate
+    if no_check_certificate:
+      system(f'wget -O {name} {link} --no-check-certificate')
+    else:
+      system(f'wget -O {name} {link}')
 
 if custom_name:
     directdown(link, name, no_check_certificate)
