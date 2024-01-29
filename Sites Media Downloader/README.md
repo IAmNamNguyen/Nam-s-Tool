@@ -18,6 +18,7 @@
 ## Save file location does not support (It will always save the file on the Colab Temp Storage):
 1. Direct Link
 2. Iwara
+3. Google Drive (You can just copy the downloaded files from Colab to Drive later)
 
 ## Have to enter account credentials:
 1. Iwara
