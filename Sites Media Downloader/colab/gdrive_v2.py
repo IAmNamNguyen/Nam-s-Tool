@@ -1,3 +1,6 @@
+#https://stackoverflow.com/questions/25010369/wget-curl-large-file-from-google-drive
+#https://stackoverflow.com/questions/25010369/wget-curl-large-file-from-google-drive/39225039#39225039
+
 import requests
 
 def download_file_from_google_drive(id, destination):
@@ -30,13 +33,13 @@ def download_file_from_google_drive(id, destination):
     save_response_content(response, destination)    
 
 
-if __name__ == "__main__":
-    import sys
-    if len(sys.argv) is not 3:
-        print("ERROR: Arguments not  specified")
-    else:
+#if __name__ == "__main__":
+import sys
+    #if len(sys.argv) is not 3:
+     #   print("ERROR: Arguments not  specified")
+    #else:
         # TAKE ID FROM SHAREABLE LINK
-        file_id = sys.argv[1]
+file_id = sys.argv[1]
         # DESTINATION FILE ON YOUR DISK
-        destination = sys.argv[2]
-        download_file_from_google_drive(file_id, destination)
+destination = sys.argv[2]
+download_file_from_google_drive(file_id, destination)
