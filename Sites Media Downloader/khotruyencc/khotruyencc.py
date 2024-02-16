@@ -53,4 +53,4 @@ def multichapters(link, dir, from_chapter, latest_chapter, *special_chapters):
         onechapter(x, dir)
 
 #onechapter("https://khotruyen.cc/truyen-tranh/ba-chi-chu-nha-the-owner-of-a-building/chapter-115/","\downloads")
-multichapters("https://khotruyen.cc/truyen-tranh/ba-chi-chu-nha-the-owner-of-a-building/chapter-115/","\downloads",110,115,0)
+#multichapters("https://khotruyen.cc/truyen-tranh/ba-chi-chu-nha-the-owner-of-a-building/chapter-115/","\downloads",110,115,0)
