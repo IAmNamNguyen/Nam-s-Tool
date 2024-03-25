@@ -7,7 +7,7 @@ import sys
 import urllib
 #https://stackoverflow.com/questions/14587728/what-does-this-error-in-beautiful-soup-means
 
-web = sys.argv[0]
+web = sys.argv[1]
 
 def kemono(url):
 
