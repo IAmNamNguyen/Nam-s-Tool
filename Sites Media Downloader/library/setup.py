@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-VERSION = '0.0.2' 
+VERSION = '0.0.3' 
 DESCRIPTION = 'Sites Media Downloader'
 LONG_DESCRIPTION = 'My first Python package to download files from sites'
 
@@ -14,7 +14,7 @@ setup(
         description=DESCRIPTION,
         long_description=LONG_DESCRIPTION,
         packages=find_packages(),
-        install_requires=['lxml','beautifulsoup4','selenium'], # add any additional packages that 
+        install_requires=['lxml','beautifulsoup4','selenium','pathlib'], # add any additional packages that 
         # needs to be installed along with your package. Eg: 'caer'
         
         keywords=['python', 'first package'],

@@ -1,15 +1,15 @@
 import requests
 from bs4 import BeautifulSoup
-from os.path import join, exists
+from os.path import join
+#, exists
 from pathlib import Path
-from os import makedirs
+#from os import makedirs
 import sys
-import urllib
+#import urllib
 #https://stackoverflow.com/questions/14587728/what-does-this-error-in-beautiful-soup-means
 
-web = sys.argv[0]
 
-def kemono(url):
+def down(url):
 
     # Gửi yêu cầu HTTP đến trang web
     response = requests.get(url)
@@ -33,11 +33,9 @@ def kemono(url):
             print(file)
             #down_dir = join(sys.path[0],"downloads")
             down_dir = Path(sys.path[0]) / "downloads"
-            if not exists(down_dir):
-                makedirs(down_dir)
+            #if not exists(down_dir):
+                #makedirs(down_dir)
             output_dir = join(down_dir,file)
             with open(output_dir, 'wb') as out_file:
                 out_file.write(response.content)
             print(f"Đã tải {link}")
-
-kemono(web)
