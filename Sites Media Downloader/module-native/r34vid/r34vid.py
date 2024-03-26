@@ -66,4 +66,4 @@ def getvideo_selenium(web):
     #link = driver.find_element(By.XPATH, "/html/body/div/div[1]/div[2]/div[2]/div/div/div[1]/div[4]/div[3]/div/a[1]")
     waitUntilDownloadCompleted(120)
 
-getvideo_selenium("https://rule34video.com/video/3295189/legend-clover-mansa-musa-2/")
+getvideo_selenium("https://rule34video.com/video/3350934/privaty-consomekitchen/")
